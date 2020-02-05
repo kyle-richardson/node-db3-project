@@ -33,3 +33,9 @@ join customer as c
 on o.customerid = c.id
 join employee as e
 on o.employeeid = e.id
+
+--stretch
+
+--   Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 8 records.
+    
+--   Display OrderID and a column called ItemCount that shows the total number of products placed on the order. Shows 196 records.
