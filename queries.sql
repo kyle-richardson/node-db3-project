@@ -37,5 +37,17 @@ on o.employeeid = e.id
 --stretch
 
 --   Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 8 records.
+
+select CategoryName as 'Category', count(productname) as 'Count'
+from product as p
+join category as c
+on p.categoryid = c.id
+group by categoryname
+
     
 --   Display OrderID and a column called ItemCount that shows the total number of products placed on the order. Shows 196 records.
+
+select OrderId as 'OrderID', sum(quantity) as 'ItemCount'
+from orderdetail
+group by orderid
+limit 196
